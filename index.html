@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" 
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Lista zakupowa</title>
+</head>
+<body>
+    <nav></nav>
+    <main>
+        <header>
+            <h1>Lista zakupowa</h1>
+        </header>
+        <div class="main-container" id="mainContainer">
+            <div id="title">
+                <h2>Dodaj kolejną pozycję</h2>
+            </div>
+            <div id="inputContainer" class="input-container">
+                <form id="inputForm" class="row g-3">
+                    <div class="input-fields">
+                        <div class="form-group col-md-3" id="inputType">
+                            <label for="inputType" class="form-label">Nazwa </label>
+                            <input type="text" class="form-control" id="inputType">
+                            <small id="inputTypeError" class="input-info-danger"></small>
+                        </div>
+    
+                        <div class="form-group col-md-2" id="inputAmount">
+                            <label for="inputAmount" class="form-label">Ilość </label>
+                            <input type="number" min="1" class="form-control" id="inputAmount">
+                            <small id="inputAmountError" class="input-info-danger"></small>
+                        </div>
+
+                        <div class="checkboxes" id="inputMeasure">
+                            <input type="radio" name="measures" value="Szt">
+                            <label>Sztuki</label>
+                            <input type="radio" name="measures" value="l">
+                            <label>Litry</label>
+                            <input type="radio" name="measures" value="Kg">
+                            <label>Kilogramy</label>
+                            <small id="inputMeasureError" class="input-info-danger"></small>
+                        </div>
+    
+                        <div class="select col-md-4" id="select">
+                            <label for="inputCategories">Dział </label>
+                            <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="inputCategories">
+                                <option selected value="Wybierz kategorię">Wybierz kategorię</option>
+                                <option name="categories" value="warzywa i owoce">warzywa i owoce</option>
+                                <option name="categories" value="suche">suche</option>
+                                <option name="categories" value="nabial">nabiał</option>
+                                <option name="categories" value="pieczywo">pieczywo</option>
+                                <option name="categories" value="napoje">napoje</option>
+                                <option name="categories" value="mieso">mięso i wedliny</option>
+                                <option name="categories" value="inne">inne</option>
+                            </select>
+                            <small id="inputCategoryError" class="input-info-danger"></small>
+                        </div>
+
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Dodaj</button>
+                    </div>
+                    <h5 class="summary" id="inputSummary"></h5>
+                </form>
+             </div>  
+            <div id="inputSummaryContainer">
+                <ul class="list-group" id="inputList"></ul>
+            </div> 
+        </div>   
+
+    </main>
+    <footer></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" 
+crossorigin="anonymous"></script>
+<script src="index.js" defer></script>    
+</body>
+</html>
